@@ -6,12 +6,12 @@ namespace C_Sharp_Practice
     {
         static void Main(string[] args)
         {
-            
+
             //Types of variables
             string uname = "Tanishq";
             int age = 23;
             char grade = 'A';
-            double d1= 3.0;
+            double d1 = 3.0;
             bool isMale = true;
 
             // forloop trial
@@ -25,7 +25,7 @@ namespace C_Sharp_Practice
             Console.WriteLine(uname.ToLower());
             Console.WriteLine(uname.Contains("ish"));
             Console.WriteLine(uname.IndexOf("i")); //Only lists the first one, -1 if not present
-            Console.WriteLine(uname.Substring(2,3)); //Initial Inedex, length of next characters
+            Console.WriteLine(uname.Substring(2, 3)); //Initial Inedex, length of next characters
             Console.WriteLine(Math.Sqrt(36));
 
             //Reading Inputs
@@ -34,7 +34,7 @@ namespace C_Sharp_Practice
             Console.WriteLine(uname2);
             string age2 = "24";
             int age3 = Convert.ToInt32(age2);
-            Console.WriteLine("Your age + 10 = "+(age3+10));
+            Console.WriteLine("Your age + 10 = " + (age3 + 10));
 
 
             //Arrays
@@ -42,15 +42,19 @@ namespace C_Sharp_Practice
             int[] arr2 = new int[5];
             for (int i = 0; i < 5; i++)
             {
-                Console.WriteLine("Enter value at " + i+ " : ");
+                Console.WriteLine("Enter value at " + i + " : ");
                 arr2[i] = Convert.ToInt32(Console.ReadLine());
             }
             Console.WriteLine(arr2); // Does not print Value, prints typeof the variable
             SayHi();
             SayName(uname);
+            Console.WriteLine(Cube(5));
+            Console.WriteLine(CanIVote(17, true));
+
             Console.ReadLine();
         }
 
+        //Practicing Functions
         static void SayHi()
         {
             Console.WriteLine("Hello!");
@@ -60,5 +64,23 @@ namespace C_Sharp_Practice
         {
             Console.WriteLine("Hello " + name);
         }
+
+        static int Cube(int num) //function with return value
+        {
+            return num * num * num;
+        }
+
+        //If Statement
+        static bool CanIVote(int age =0, bool isSpecialCase = false)
+        {
+            if (age >= 18)
+                return true;
+            else if (age < 18 && isSpecialCase == true)
+                return true;
+            else
+                return false;
+        }
+
+
     }
 }
