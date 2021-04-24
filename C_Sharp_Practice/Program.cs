@@ -50,6 +50,8 @@ namespace C_Sharp_Practice
             SayName(uname);
             Console.WriteLine(Cube(5));
             Console.WriteLine(CanIVote(17, true));
+            Console.WriteLine(NameofDay(1));
+            WhileLoop();
 
             Console.ReadLine();
         }
@@ -70,7 +72,7 @@ namespace C_Sharp_Practice
             return num * num * num;
         }
 
-        //If Statement
+        //If Else Statement
         static bool CanIVote(int age =0, bool isSpecialCase = false)
         {
             if (age >= 18)
@@ -81,6 +83,51 @@ namespace C_Sharp_Practice
                 return false;
         }
 
+        //Switch Statment
+        static string NameofDay(int num)
+        {
+            string name="";
+            switch (num)
+            {
+                case 0:
+                    name = "Sunday";
+                    break;
+                case 1:
+                    name = "Monday";
+                    break;
+                case 2:
+                    name = "Tuesday";
+                    break;
+                case 3:
+                    name = "Wednesday";
+                    break;
+                case 4:
+                    name = "Thursday";
+                    break;
+                case 5:
+                    name = "Friday";
+                    break;
+                case 6:
+                    name = "Saturday";
+                    break;
+                default:
+                    name = "Invalid Number!";
+                    break;
+            }
 
+            return name;
+
+        }
+
+        //While Loop
+        static void WhileLoop()
+        {
+            int index = 1;
+            while(index<=5)
+            {
+                Console.WriteLine(index);
+                index++;
+            }
+        }
     }
 }
