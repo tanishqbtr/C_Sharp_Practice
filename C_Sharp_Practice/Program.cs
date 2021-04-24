@@ -52,6 +52,7 @@ namespace C_Sharp_Practice
             Console.WriteLine(CanIVote(17, true));
             Console.WriteLine(NameofDay(1));
             WhileLoop();
+            PerformCalculation();
 
             Console.ReadLine();
         }
@@ -127,6 +128,24 @@ namespace C_Sharp_Practice
             {
                 Console.WriteLine(index);
                 index++;
+            }
+        }
+
+        //Exception Handling
+        static void PerformCalculation()
+        {
+            try{
+
+                Console.Write("Enter 1st number : ");
+                int num1 = Convert.ToInt32(Console.ReadLine());
+                Console.Write("Enter 2nd number : ");
+                int num2 = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine(num1 / num2);
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
             }
         }
     }
