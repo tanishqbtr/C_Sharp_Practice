@@ -147,6 +147,10 @@ namespace C_Sharp_Practice
             {
                 Console.WriteLine(e.Message);
             }
+            finally
+            {
+                Console.WriteLine("Calculation Complete!");
+            }
         }
     }
 }
