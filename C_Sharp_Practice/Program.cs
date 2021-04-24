@@ -46,9 +46,19 @@ namespace C_Sharp_Practice
                 arr2[i] = Convert.ToInt32(Console.ReadLine());
             }
             Console.WriteLine(arr2); // Does not print Value, prints typeof the variable
-
-
+            SayHi();
+            SayName(uname);
             Console.ReadLine();
+        }
+
+        static void SayHi()
+        {
+            Console.WriteLine("Hello!");
+        }
+
+        static void SayName(string name)
+        {
+            Console.WriteLine("Hello " + name);
         }
     }
 }
