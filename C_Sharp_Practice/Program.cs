@@ -6,7 +6,7 @@ namespace C_Sharp_Practice
     {
         static void Main(string[] args)
         {
-
+            
             //Types of variables
             string uname = "Tanishq";
             int age = 23;
@@ -53,6 +53,36 @@ namespace C_Sharp_Practice
             Console.WriteLine(NameofDay(1));
             WhileLoop();
             PerformCalculation();
+            
+
+            //New Class Object
+            Book b1 = new Book();
+            b1.Title = "Harry Potter";
+            b1.Author = "JK Rowling";
+            b1.pages = 400;
+
+            //Using Constructor
+            Book b2 = new Book("LOTR", "Tolkein", 700);
+
+            //Getter and Setters are being used to check rating between 1-5 else 0
+            Console.WriteLine(b1.Title + b1.Author + b1.pages + b1.isLong() + b1.Rating);
+            Console.WriteLine(b2.Title + b2.Author + b2.pages + b2.isLong() + b2.Rating);
+
+            Book b3 = new Book("Avengers", "Joss Whedon", 300, 5);
+            Console.WriteLine(b3.Title + b3.Author + b3.pages + b3.isLong() + b3.Rating);
+            
+            //Static variable can be called directly using class name. This applies to static methods as well.
+            Console.WriteLine(Book.Count);
+            
+
+            //Inheritence, virtual functions and overiding functions
+            GenericChef C1 = new GenericChef();
+            C1.IndianFood();
+            SpecialIndianChef S1 = new SpecialIndianChef();
+            S1.IndianFood();
+            S1.ItalianFood();
+
+
 
             Console.ReadLine();
         }
